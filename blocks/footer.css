@@ -1,0 +1,13 @@
+.footer {
+  max-width: 880px;
+  margin: 67px auto 0 auto;
+}
+
+.footer__copyright {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21.78px;
+  margin: auto;
+  color: #545454;
+}

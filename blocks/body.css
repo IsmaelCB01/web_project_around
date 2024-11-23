@@ -1,0 +1,12 @@
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  background-color: black;
+  font-family: "Inter";
+  color: #ffffff;
+}
