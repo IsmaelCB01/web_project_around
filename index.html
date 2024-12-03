@@ -33,11 +33,13 @@
           <div class="profile__info information">
             <div class="information__content">
               <h2 class="information__name">Jacques Cousteau</h2>
-              <img
-                class="information__button-edit"
-                src="./images/profile__images/profile__edit__button.svg"
-                alt="boton de edicion del perfil"
-              />
+              <button class="information__button">
+                <img
+                  class="information__image"
+                  src="./images/profile__images/profile__edit__button.svg"
+                  alt="boton de edicion del perfil"
+                />
+              </button>
             </div>
             <p class="information__description">Explorador</p>
           </div>
@@ -49,7 +51,6 @@
             />
           </div>
         </section>
-
         <div class="cards">
           <div class="card">
             <img
@@ -146,6 +147,37 @@
       <footer class="footer">
         <p class="footer__copyright">© Ismael Cruz, Around The U.S. 2024</p>
       </footer>
+      <dialog open class="popup">
+        <button class="popup__button popup__button--close">
+          <img
+            src="./images/popup__close.svg"
+            alt="boton de cierre de popup"
+            class="popup__image"
+          />
+        </button>
+        <form class="popup__form">
+          <p class="popup__title">Editar perfil</p>
+          <fieldset class="popup__fieldset">
+            <input
+              id="bname"
+              name="bname"
+              placeholder="Nombre"
+              type="text"
+              class="popup__input popup__input--name"
+            />
+            <input
+              id="babout"
+              name="babout"
+              placeholder="Acerca de mi"
+              type="text"
+              class="popup__input popup__input--about-me"
+            />
+            <button class="popup__button popup__button--save" type="submit">
+              Guardar
+            </button>
+          </fieldset>
+        </form>
+      </dialog>
       <!-- <div class="popup popup_show popup_profile">
         <div class="popup__overlay"></div>
         <div class="popup__content">
@@ -177,4 +209,5 @@
       </div> -->
     </div>
   </body>
+  <script src="./index.js"></script>
 </html>

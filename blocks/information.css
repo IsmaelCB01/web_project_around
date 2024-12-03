@@ -20,13 +20,20 @@
   line-height: 22px;
 }
 
-.information__button-edit {
+.information__button {
   max-width: 24px;
   max-height: 24px;
+  background-color: transparent;
+  border: 0px;
+  padding: 0px;
   cursor: pointer;
 }
 
-.information__button-edit:hover {
+.information__image {
+  width: 100%;
+}
+
+.information__button:hover {
   opacity: 40%;
 }
 
@@ -47,7 +54,7 @@
     line-height: 27px;
   }
 
-  .information__button-edit {
+  .information__button {
     max-width: 18px;
     max-height: 18px;
   }
