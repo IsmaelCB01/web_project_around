@@ -1,17 +1,26 @@
 .popup {
-  min-width: 430px;
+  min-width: 460px;
+  min-height: 340px;
+  padding: 0px;
+  border-color: transparent;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+}
+
+.popup__contener {
+  max-width: 430px;
   min-height: 330px;
   padding: 0px;
   border-radius: 15px;
-  position: relative;
+  background-color: #fff;
+  border-color: #fff;
 }
 
 .popup__button--close {
   max-width: 40px;
   max-height: 40px;
-  position: absolute;
-  top: -40px;
-  right: -40px;
+  align-self: flex-end;
   background-color: transparent;
   border: none;
   cursor: pointer;
