@@ -349,3 +349,10 @@ template {
 [hidden] {
   display: none;
 }
+
+
+/* Oculta el dialog cuando este esta cerrado en la pseudoclase not */
+
+dialog:not([open]) {
+  display: none;
+}
