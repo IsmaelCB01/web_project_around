@@ -17,7 +17,7 @@
   border-color: #fff;
 }
 
-.popup__button--close {
+.popup__button_type_close {
   max-width: 40px;
   max-height: 40px;
   align-self: flex-end;
@@ -30,7 +30,7 @@
   width: 100%;
 }
 
-.popup__button--close:hover {
+.popup__button_type_close {
   opacity: 40%;
 }
 
@@ -72,7 +72,7 @@
   color: black;
 }
 
-.popup__button--save {
+.popup__button_type_save {
   width: 100%;
   min-height: 50px;
   border: 1px solid black;
@@ -82,7 +82,7 @@
   cursor: pointer;
 }
 
-.popup__button--save:hover {
+.popup__button_type_save:hover {
   opacity: 20%;
 }
 
@@ -92,7 +92,7 @@
     min-height: 322px;
   }
 
-  .popup__button--close {
+  .popup__button_type_close {
     max-width: 28px;
     max-height: 28px;
     top: -28px;
@@ -107,9 +107,10 @@
   .popup__title {
     font-size: 18px;
     line-height: 21px;
+    margin-bottom: 76px;
   }
 
-  .popup__button--save {
+  .popup__button_type_save {
     margin-top: 46px;
   }
 }

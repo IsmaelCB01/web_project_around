@@ -1,8 +1,8 @@
 const btnOpenPopup = document.querySelector(".information__button");
 const popupProfile = document.querySelector(".popup");
 const popupContener = document.querySelector(".popup__contener");
-const btnClosePopup = document.querySelector(".popup__button--close");
-const btnSaveProfile = document.querySelector(".popup__button--save");
+const btnClosePopup = document.querySelector(".popup__button_type_close");
+const btnSaveProfile = document.querySelector(".popup__button_type_save");
 
 const form = document.querySelector(".popup__form");
 const profileName = document.querySelector(".information__name");

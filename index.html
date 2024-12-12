@@ -148,7 +148,7 @@
         <p class="footer__copyright">© Ismael Cruz, Around The U.S. 2024</p>
       </footer>
       <dialog class="popup">
-        <button class="popup__button popup__button--close">
+        <button class="popup__button popup__button_type_close">
           <img
             src="./images/popup__close.svg"
             alt="boton de cierre de popup"
@@ -164,16 +164,19 @@
                 name="pname"
                 placeholder="Nombre"
                 type="text"
-                class="popup__input popup__input--name"
+                class="popup__input"
               />
               <input
                 id="pabout"
                 name="pabout"
                 placeholder="Acerca de mi"
                 type="text"
-                class="popup__input popup__input--about-me"
+                class="popup__input"
               />
-              <button class="popup__button popup__button--save" type="submit">
+              <button
+                class="popup__button popup__button_type_save"
+                type="submit"
+              >
                 Guardar
               </button>
             </fieldset>
