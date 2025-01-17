@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(282px, 1fr));
   gap: 17px;
+  padding: 0px;
 }
 
 .card {
@@ -11,6 +12,8 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  position: relative;
+  z-index: 1;
 }
 
 .card__image {
@@ -23,7 +26,7 @@
   background-color: #fff;
   align-items: center;
   justify-content: space-between;
-  padding: 18px;
+  padding: 15px;
   box-sizing: border-box;
   height: 79px;
 }
@@ -36,6 +39,18 @@
   color: #000000;
 }
 
+.card__btn {
+  background-color: transparent;
+  border: none;
+}
+
+.card__btn-action-remove {
+  position: absolute;
+  right: 15px;
+  top: 18px;
+  z-index: 2;
+}
+
 .card__icon {
   max-width: 21px;
   max-height: 19px;
@@ -44,4 +59,8 @@
 .card__icon:hover {
   opacity: 40%;
   cursor: pointer;
+}
+
+.card__icon:active {
+  background-color: black;
 }
