@@ -51,6 +51,10 @@
   z-index: 2;
 }
 
+.card__btn-action-like {
+  background-color: #fff;
+}
+
 .card__icon {
   max-width: 21px;
   max-height: 19px;
@@ -63,4 +67,8 @@
 
 .card__icon:active {
   background-color: black;
+}
+
+.card__btn-action-like svg.active {
+  fill: black; /* Cambia el color del SVG */
 }

@@ -58,12 +58,13 @@
       <footer class="footer">
         <p class="footer__copyright">© Ismael Cruz, Around The U.S. 2024</p>
       </footer>
+
       <dialog class="popup popup--profile">
         <button class="popup__button popup__button_type_close">
           <img
             src="./images/popup__close.svg"
             alt="boton de cierre de popup"
-            class="popup__image"
+            class="popup__img-close"
           />
         </button>
         <div class="popup__contener">
@@ -101,7 +102,7 @@
           <img
             src="./images/popup__close.svg"
             alt="boton de cierre de popup"
-            class="popup__image"
+            class="popup__img-close"
           />
         </button>
         <div class="popup__contener">
@@ -135,9 +136,17 @@
       </dialog>
 
       <dialog class="popup--image">
+        <button class="popup__button popup__button_type_close">
+          <img
+            src="./images/popup__close.svg"
+            alt="boton de cierre de popup"
+            class="popup__img-close"
+          />
+        </button>
         <div class="popup__image-contener">
-          <img class="popup__image" src="" alt="" />
+          <img class="popup__img" src="" alt="" />
         </div>
+        <h2 class="popup__title-image"></h2>
       </dialog>
 
       <template id="card-template">
@@ -156,7 +165,7 @@
               <img
                 src="/images/cards_images/card__icon__heart.svg"
                 alt="icono de corazon"
-                class="card__icon"
+                class="card__icon card__icon-img-heart"
               />
             </button>
           </div>

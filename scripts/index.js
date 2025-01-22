@@ -15,7 +15,13 @@ const inputCardName = document.querySelector("#ptitle");
 const inputCardLink = document.querySelector("#plink");
 const btnSaveCard = document.querySelector("#popup-add-card-btn-save");
 
+//Variables para el contendor de tarjetas
 const cardsContainer = document.querySelector(".cards");
+
+//Variables de popup Imagen
+const popupImage = document.querySelector(".popup--image");
+const popupImageContent = document.querySelector(".popup__img");
+const popupImageTitle = document.querySelector(".popup__title-image");
 
 const initialCards = [
   {
@@ -58,6 +64,7 @@ btnClosePopup.forEach((btn) => {
   btn.addEventListener("click", function () {
     popupProfile.close();
     popupAddCard.close();
+    popupImage.close();
   });
 });
 
@@ -90,6 +97,15 @@ function createCard(data) {
     cardElement.remove();
   });
 
+  const likeButton = cardElement.querySelector(".card__btn-action-like");
+  const likeIcon = likeButton.querySelector(".card__icon");
+  likeButton.addEventListener("click", function () {
+    const currentSrc = likeIcon.src;
+    likeIcon.src = currentSrc.includes("heart.svg")
+      ? "/images/cards_images/card__icon__heart-active.svg"
+      : "/images/cards_images/card__icon__heart.svg";
+  });
+
   return cardElement;
 }
 
@@ -113,7 +129,7 @@ btnAddCard.addEventListener("click", function () {
   popupAddCard.showModal();
 });
 
-//Generar tarjeta nueva a partir de formulario
+//Generar tarjeta nueva a partir de formulario anadir tarjeta
 btnSaveCard.addEventListener("click", function (event) {
   event.preventDefault();
   const title = inputCardName.value;
@@ -123,11 +139,27 @@ btnSaveCard.addEventListener("click", function (event) {
     const newCard = { name: title, link: link };
     userCards.push(newCard); // Añadir al array existente
     cardsContainer.prepend(createCard(newCard)); // Añadir al DOM
-    console.log(newCard);
     inputCardName.value = ""; // Limpiar el campo de entrada
     inputCardLink.value = ""; // Limpiar el campo de entrada
   } else {
     alert("Por favor, complete ambos campos.");
   }
   popupAddCard.close();
+});
+
+// Ver imagen de tarjeta en grande
+cardsContainer.addEventListener("click", function (event) {
+  const clickedElement = event.target;
+
+  if (clickedElement.classList.contains("card__image")) {
+    const imgSrc = clickedElement.getAttribute("src"); // Obtiene el src original de la imagen de la tarjeta
+    const imgTitle = clickedElement
+      .closest(".card")
+      .querySelector(".card__title").textContent; // Obtiene el título de la imagen
+
+    popupImageContent.src = imgSrc; // Asigna el src al popup de la imagen
+    popupImageContent.alt = clickedElement.alt; // Asigna el alt al popup
+    popupImageTitle.textContent = imgTitle; // Asigna el título al popup
+    popupImage.showModal(); // Muestra el popup
+  }
 });
