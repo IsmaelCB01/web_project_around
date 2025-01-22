@@ -34,7 +34,7 @@
   background-color: transparent;
 }
 
-.profile__button:hover {
+.profile__btn:hover {
   opacity: 40%;
 }
 
@@ -58,7 +58,7 @@
     margin-right: 0px1;
   }
 
-  .profile__button {
+  .profile__btn {
     width: 100%;
     max-height: 50px;
     margin: auto;

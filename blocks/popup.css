@@ -17,9 +17,7 @@
   border-color: #fff;
 }
 
-.popup__button_type_close {
-  max-width: 40px;
-  max-height: 40px;
+.popup__btn_type_close {
   align-self: flex-end;
   background-color: transparent;
   border: none;
@@ -30,8 +28,13 @@
   width: 100%;
 }
 
-.popup__button_type_close:hover {
+.popup__btn_type_close:hover {
   opacity: 40%;
+}
+
+.popup__img-close {
+  max-width: 40px;
+  max-height: 40px;
 }
 
 .popup__form {
@@ -72,7 +75,11 @@
   color: black;
 }
 
-.popup__button_type_save {
+.popup__btn {
+  padding: 0px;
+}
+
+.popup__btn_type_save {
   width: 100%;
   min-height: 50px;
   border: 1px solid black;
@@ -82,7 +89,7 @@
   cursor: pointer;
 }
 
-.popup__button_type_save:hover {
+.popup__btn_type_save:hover {
   opacity: 20%;
 }
 
@@ -99,7 +106,7 @@
   height: 100%;
 }
 
-.popup__image {
+.popup__img {
   width: 75vw;
   height: 75vh;
 }
@@ -117,11 +124,9 @@
     min-height: 322px;
   }
 
-  .popup__button_type_close {
+  .popup__btn_type_close {
     max-width: 28px;
     max-height: 28px;
-    top: -28px;
-    right: -0px;
   }
 
   .popup__form {
@@ -135,7 +140,22 @@
     margin-bottom: 76px;
   }
 
-  .popup__button_type_save {
+  .popup__btn_type_save {
     margin-top: 46px;
+  }
+
+  /*   .popup--image {
+    min-width: 240px;
+    min-height: 290px;
+  } */
+
+  .popup__img {
+    max-width: 240px;
+    height: 290px;
+  }
+
+  .popup__img-close {
+    max-width: 26px;
+    max-height: 26px;
   }
 }
