@@ -24,9 +24,9 @@
   cursor: pointer;
 }
 
-.popup__image {
+/* .popup__image {
   width: 100%;
-}
+} */
 
 .popup__btn_type_close:hover {
   opacity: 40%;
