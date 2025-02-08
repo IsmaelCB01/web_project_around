@@ -1,3 +1,5 @@
+import { settings } from "./validate.js";
+
 //variables de formulario profile
 const btnOpenPopup = document.querySelector(".information__button");
 const popupProfile = document.querySelector(".popup--profile");
@@ -5,14 +7,14 @@ const btnClosePopup = document.querySelectorAll(".popup__btn_type_close");
 const btnSaveProfile = document.querySelector("#popup-profile-btn-save");
 const profileName = document.querySelector(".information__name");
 const profileOccupation = document.querySelector(".information__description");
-const inputProfileName = document.querySelector("#pname");
-const inputProfileOccupation = document.querySelector("#pabout");
+const inputProfileName = document.querySelector("#input-name");
+const inputProfileOccupation = document.querySelector("#input-about");
 
 //variables formulario para añadir cartas
-const btnAddCard = document.querySelector(".profile__btn");
+const btnAddCard = document.querySelector("#btn-add-card");
 const popupAddCard = document.querySelector(".popup--add-card");
-const inputCardName = document.querySelector("#ptitle");
-const inputCardLink = document.querySelector("#plink");
+const inputCardName = document.querySelector("#input-place");
+const inputCardLink = document.querySelector("#input-url");
 const btnSaveCard = document.querySelector("#popup-add-card-btn-save");
 
 //Variables para el contendor de tarjetas
@@ -55,8 +57,8 @@ let userCards = [];
 //Abrir formulario de informacion de perfil
 btnOpenPopup.addEventListener("click", function () {
   popupProfile.showModal();
-  inputProfileName.value = profileName.textContent;
-  inputProfileOccupation.value = profileOccupation.textContent;
+  /*   inputProfileName.value = profileName.textContent;
+  inputProfileOccupation.value = profileOccupation.textContent; */
 });
 
 //Cerrar los formularios
@@ -71,17 +73,10 @@ btnClosePopup.forEach((btn) => {
 //Guardar informacion de perfil
 btnSaveProfile.addEventListener("click", function (event) {
   event.preventDefault();
-  profileName.textContent = inputName.value;
-  profileOccupation.textContent = inputOccupation.value;
+  profileName.textContent = inputProfileName.value;
+  profileOccupation.textContent = inputProfileOccupation.value;
   popupProfile.close();
 });
-
-/* function profileForSubmit(event) {
-  event.preventDefault();
-  profileName.textContent = inputName.value;
-  profileOccupation.textContent = inputOccupation.value;
-  popupProfile.close();
-} */
 
 //Funcion para crear las tarjetas
 function createCard(data) {
@@ -97,6 +92,7 @@ function createCard(data) {
     cardElement.remove();
   });
 
+  //Darle me gusta a una tarjeta
   const likeButton = cardElement.querySelector(".card__btn-action-like");
   const likeIcon = likeButton.querySelector(".card__icon");
   likeButton.addEventListener("click", function () {
@@ -113,16 +109,6 @@ function createCard(data) {
 initialCards.forEach((card) => {
   cardsContainer.append(createCard(card));
 });
-
-/* //Es necesario tomar todos los botones despues de que se generen las tarjeta;
-const btnRemoveCard = document.querySelectorAll(".card__btn-action-remove");
-btnRemoveCard.forEach((btn) => {
-  btn.addEventListener("click", function () {
-    const cardRemove = btn.closest(".card");
-    cardRemove.remove();
-  });
-});
- */
 
 //Abrir formulario de agregar tarjetas
 btnAddCard.addEventListener("click", function () {
@@ -162,4 +148,31 @@ cardsContainer.addEventListener("click", function (event) {
     popupImageTitle.textContent = imgTitle; // Asigna el título al popup
     popupImage.showModal(); // Muestra el popup
   }
+});
+
+// Función para cerrar popup cuando se presiona la tecla Escape
+function closePopupWithEsc(event) {
+  if (event.key === "Escape") {
+    const openPopup = document.querySelector("dialog[open]");
+    if (openPopup) {
+      openPopup.close();
+    }
+  }
+}
+
+// Función para cerrar popup al hacer clic fuera del contenido
+function closePopupOnClickOutside(event) {
+  if (event.target === event.currentTarget) {
+    event.target.close();
+  }
+}
+
+// Agregar eventos globales
+document.addEventListener("keydown", closePopupWithEsc);
+
+// Seleccionar todos los popups y agregar eventos
+const popups = document.querySelectorAll("dialog");
+
+popups.forEach((popup) => {
+  popup.addEventListener("click", closePopupOnClickOutside);
 });
