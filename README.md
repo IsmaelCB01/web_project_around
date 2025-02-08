@@ -19,4 +19,16 @@ Para la continuacion del proyecto, se han agregado las siguientes funciones al c
 
 Ismael Cruz Bustillos
 
+#Tercera carga del proyecto Web-around-world
+Proyecto del Sprint 9 de Tripleten
+Para la continuacion del proyecto, se han agregado las siguientes funciones al codigo de JS:
+
+-Validacion de formularios que consiten en revisar los inputs que ingresa el usuarios teniendo validaciones por el tipo de input, longitud y que sea requerido
+-Formulario de perfil
+-Formualrio de anadir tarjeta
+
+-Se agregaron handlers para poder cerrar los formularios con la tecla Escape y al dar click fuera del popup
+
+Ismael Cruz Bustillos
+
 URL:https://ismaelcb01.github.io/web_project_around/
