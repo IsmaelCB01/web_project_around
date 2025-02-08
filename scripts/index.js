@@ -2,7 +2,7 @@ import { settings } from "./validate.js";
 
 //variables de formulario profile
 const btnOpenPopup = document.querySelector(".information__button");
-const popupProfile = document.querySelector(".popup--profile");
+const popupProfile = document.querySelector(".popup-profile");
 const btnClosePopup = document.querySelectorAll(".popup__btn_type_close");
 const btnSaveProfile = document.querySelector("#popup-profile-btn-save");
 const profileName = document.querySelector(".information__name");
@@ -12,7 +12,7 @@ const inputProfileOccupation = document.querySelector("#input-about");
 
 //variables formulario para añadir cartas
 const btnAddCard = document.querySelector("#btn-add-card");
-const popupAddCard = document.querySelector(".popup--add-card");
+const popupAddCard = document.querySelector(".popup-add-card");
 const inputCardName = document.querySelector("#input-place");
 const inputCardLink = document.querySelector("#input-url");
 const btnSaveCard = document.querySelector("#popup-add-card-btn-save");
@@ -21,7 +21,7 @@ const btnSaveCard = document.querySelector("#popup-add-card-btn-save");
 const cardsContainer = document.querySelector(".cards");
 
 //Variables de popup Imagen
-const popupImage = document.querySelector(".popup--image");
+const popupImage = document.querySelector(".popup-image");
 const popupImageContent = document.querySelector(".popup__img");
 const popupImageTitle = document.querySelector(".popup__title-image");
 
