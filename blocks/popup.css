@@ -41,7 +41,7 @@
   flex-direction: column;
 }
 
-.popup--image {
+.popup-image {
   background-color: transparent;
   border-color: transparent;
   display: flex;
