@@ -13,3 +13,8 @@ body {
 dialog::backdrop {
   background: rgba(000, 0, 0, 0.75);
 }
+
+/* Oculta el dialog cuando este esta cerrado en la pseudoclase not */
+dialog:not([open]) {
+  display: none;
+}
