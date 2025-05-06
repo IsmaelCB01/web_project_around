@@ -32,3 +32,14 @@ Para la continuacion del proyecto, se han agregado las siguientes funciones al c
 Ismael Cruz Bustillos
 
 URL:https://ismaelcb01.github.io/web_project_around/
+
+#Cuarta carga del proyecto Web-around-world
+Proyecto del Sprint 10 de Tripleten
+Para la continuacion del proyecto, se han agregado las siguientes funciones al codigo de JS:
+
+-Se ha iniciado la Porgramación Orientada a Objetos!!!!!
+-Este Sprint no fue de agregar funcionalidad, fue refactorización y limpieza en el codigo para empaquetar en clases las funciones y trabajarlas como blueprint
+
+Ismael Cruz Bustillos
+
+URL:https://ismaelcb01.github.io/web_project_around/
