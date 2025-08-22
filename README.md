@@ -43,3 +43,13 @@ Para la continuacion del proyecto, se han agregado las siguientes funciones al c
 Ismael Cruz Bustillos
 
 URL:https://ismaelcb01.github.io/web_project_around/
+
+#Quinta Carga del proyecto Web-around-world
+Proyecto del Sprint 11 de Tripleten
+
+Para la continuacion del proyecto, se han agregado las siguientes funciones al codigo de JS:
+
+-Se continuo trabajando con POO
+-Se agregaros las clases de Popup, PopupWithForm, PopupWithImage, Section, UserInfo
+-Se modifico el INdex para que tuviera lo escencial del codigo, se importa todo y solo se intancian clases
+-Se volvio a organizar el proyecto por funcionalidades
