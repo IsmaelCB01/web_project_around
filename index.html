@@ -32,7 +32,7 @@
           </div>
           <div class="profile__info information">
             <div class="information__content">
-              <h2 class="information__name">Jacques Cousteau</h2>
+              <h2 class="information__name"></h2>
               <button class="information__button">
                 <img
                   class="information__image"
@@ -41,7 +41,7 @@
                 />
               </button>
             </div>
-            <p class="information__description">Explorador</p>
+            <p class="information__description"></p>
           </div>
           <button id="btn-add-card" class="profile__btn">
             <img
@@ -52,7 +52,7 @@
           </button>
         </section>
         <div>
-          <ul class="cards"></ul>
+          <ul class="cards__container"></ul>
         </div>
       </main>
       <footer class="footer">
@@ -125,7 +125,7 @@
                 <input
                   required
                   id="input-place"
-                  name="cplace"
+                  name="name"
                   type="text"
                   class="form__input"
                   placeholder="Titulo"
@@ -138,7 +138,7 @@
                 <input
                   required
                   id="input-url"
-                  name="curl"
+                  name="link"
                   type="url"
                   class="form__input"
                   placeholder="Enlace a la imagen"
@@ -165,7 +165,7 @@
             class="popup__img-close"
           />
         </button>
-        <div class="popup__image-contener">
+        <div class="popup__image-container">
           <img class="popup__img" src="" alt=" " />
         </div>
         <h2 class="popup__title-image"></h2>
