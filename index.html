@@ -67,7 +67,7 @@
             class="popup__img-close"
           />
         </button>
-        <div class="popup__contener">
+        <div class="popup__container">
           <form id="form-profile" class="popup__form form">
             <p class="form__title">Editar perfil</p>
             <fieldset class="form__set">
@@ -117,7 +117,7 @@
             class="popup__img-close"
           />
         </button>
-        <div class="popup__contener">
+        <div class="popup__container">
           <form id="form-place" class="popup__form form">
             <p class="form__title">Nuevo lugar</p>
             <fieldset class="form__set">
@@ -169,6 +169,58 @@
           <img class="popup__img" src="" alt=" " />
         </div>
         <h2 class="popup__title-image"></h2>
+      </dialog>
+
+      <dialog class="popup popup-type-deleate-image">
+        <button class="popup__btn popup__btn_type_close">
+          <img
+            src="./images/popup__close.svg"
+            alt="boton de cierre de popup"
+            class="popup__img-close"
+          />
+        </button>
+        <div class="popup__container-type-confirm">
+          <fieldset class="popup__fieldset-type-confirm">
+            <p class="popup__title-confirm">¿Estas seguro/a?</p>
+            <button class="popup__btn popup__btn-type-confirm">Si</button>
+          </fieldset>
+        </div>
+      </dialog>
+
+      <dialog class="popup popup-type-change-profile">
+        <button class="popup__btn popup__btn_type_close">
+          <img
+            src="./images/popup__close.svg"
+            alt="boton de cierre de popup"
+            class="popup__img-close"
+          />
+        </button>
+        <div class="popup__container-type-change-profile">
+          <form id="form-place" class="popup__form form">
+            <p class="form__title">Cambiar foto de perfil</p>
+            <fieldset class="form__set">
+              <label class="form__field">
+                <input
+                  required
+                  id="input-photo"
+                  name="photourl"
+                  type="url"
+                  class="form__input"
+                  placeholder="URL de foto de perfil"
+                  minlength="2"
+                  maxlength="30"
+                />
+                <span class="form__span-error" id="input-place-error"></span>
+              </label>
+              <button
+                class="form__btn form__btn_type_save"
+                id="popup-add-photo-btn-save"
+                type="submit"
+              >
+                Guardar
+              </button>
+            </fieldset>
+        </div>
       </dialog>
 
       <template id="card-template">
