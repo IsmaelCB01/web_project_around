@@ -35,7 +35,7 @@
   border-color: #fff;
 }
 
-.popup__fieldset-type-confirm{
+.popup__fieldset-type-confirm {
   border: none;
   display: flex;
   flex-direction: column;
@@ -44,14 +44,19 @@
   margin: 36px 34px 34px 30px;
 }
 
-
-.popup__fieldset-type-change-profile{
+.popup__fieldset-type-change-profile {
   border: none;
   display: flex;
   flex-direction: column;
   gap: 36px;
   padding: 0px;
   margin: 36px 34px 34px 30px;
+}
+
+.popup__title-confirm {
+  font-size: 20px;
+  line-height: 15px;
+  font-weight: 900;
 }
 
 .popup__title {
@@ -111,7 +116,7 @@
 
 .popup__btn {
   padding: 0px;
-  width: 100%;
+  width: auto;
   min-height: 50px;
   margin-top: 19px;
 }
@@ -123,7 +128,6 @@
   cursor: pointer;
   margin-top: 0px;
 }
-
 
 @media screen and (max-width: 500px) {
   .popup {

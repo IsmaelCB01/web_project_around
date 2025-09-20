@@ -16,14 +16,18 @@ export default class PopupWithForm extends Popup {
 
   close() {
     super.close();
-    this._popupElement.querySelector(".popup__form").reset();
+    const form = this._popupElement.querySelector(".popup__form");
+    if (form) form.reset();
   }
 
   setEventListeners() {
     super.setEventListeners();
     this._popupElement.addEventListener("submit", (event) => {
       event.preventDefault();
-      this._handleFormSubmit(this._getInputValues());
+      const submitButton = this._popupElement.querySelector(
+        ".form__btn_type_save"
+      );
+      this._handleFormSubmit(this._getInputValues(), submitButton);
     });
   }
 }

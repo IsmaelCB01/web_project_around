@@ -27,8 +27,15 @@
             <img
               src="./images/profile__images/profile__image.png"
               alt="imagen de perfil"
-              class="profile__image-content"
+              class="profile__image-content information__avatar"
             />
+            <div class="profile__avatar-overlay">
+              <img
+                src="./images/profile__images/profile__btn_edit_photo.svg"
+                alt="Editar foto"
+                class="profile__avatar-edit"
+              />
+            </div>
           </div>
           <div class="profile__info information">
             <div class="information__content">
@@ -208,7 +215,7 @@
                   class="form__input"
                   placeholder="URL de foto de perfil"
                   minlength="2"
-                  maxlength="30"
+                  maxlength="300"
                 />
                 <span class="form__span-error" id="input-place-error"></span>
               </label>

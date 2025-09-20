@@ -53,3 +53,14 @@ Para la continuacion del proyecto, se han agregado las siguientes funciones al c
 -Se agregaros las clases de Popup, PopupWithForm, PopupWithImage, Section, UserInfo
 -Se modifico el INdex para que tuviera lo escencial del codigo, se importa todo y solo se intancian clases
 -Se volvio a organizar el proyecto por funcionalidades
+
+#Sexta Carga del proyecto Web-around-world
+Proyecto del Sprint 11 de Tripleten
+
+Para la continuacion del proyecto, se han agregado las siguientes funciones al codigo de JS:
+
+-Se continuo trabajando con POO
+-Se agregaros las clases de Api, PopupWithConfirmation
+-Se modifico el Index para que intanciar las clases de la Api
+-Se modificaron las demas clases para permitir la carga de las trajetas e información del usuario a traves de los metodos de la Api
+-Se volvio a organizar el proyecto por funcionalidadesgit add -a

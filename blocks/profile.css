@@ -1,3 +1,34 @@
+.profile__image {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  cursor: pointer;
+}
+
+.profile__avatar-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s;
+  border-radius: 50%;
+}
+
+.profile__image:hover .profile__avatar-overlay {
+  opacity: 1;
+}
+
+.profile__avatar-edit {
+  width: 40px;
+  height: 40px;
+  pointer-events: none;
+}
 .profile {
   margin-top: 40px;
   margin-bottom: 50px;

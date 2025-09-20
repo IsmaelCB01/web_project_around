@@ -1,9 +1,28 @@
+import api from "./Api.js";
+
 export default class Card {
-  constructor(name, link, cardSelector, handleCardClick) {
+  constructor({
+    name,
+    link,
+    cardSelector,
+    handleCardClick,
+    cardId,
+    ownerId,
+    userId,
+    isLiked,
+    likes,
+    handleDeleteClick,
+  }) {
     this._name = name;
     this._link = link;
     this._cardSelector = cardSelector;
     this._handleCardClick = handleCardClick;
+    this._cardId = cardId;
+    this._ownerId = ownerId;
+    this._userId = userId;
+    this._isLiked = isLiked;
+    this._likes = likes || [];
+    this._handleDeleteClick = handleDeleteClick;
   }
 
   _getTemplate() {
@@ -13,19 +32,41 @@ export default class Card {
       .cloneNode(true);
   }
 
-  _handleDeleteCard = () => {
-    this._element.remove();
-  };
+  _updateLikeView(isLiked, likesCount) {
+    this._likeButtonIcon.src = isLiked
+      ? "./images/cards_images/card__icon__heart-active.svg"
+      : "./images/cards_images/card__icon__heart.svg";
+    if (this._likeCountElem) {
+      this._likeCountElem.textContent = likesCount;
+    }
+  }
 
   _handleLikeButton() {
     this._likeButton = this._element.querySelector(".card__btn-action-like");
     this._likeButtonIcon = this._likeButton.querySelector(".card__icon");
+    this._likeCountElem = this._element.querySelector(".card__like-count");
+    this._updateLikeView(this._isLiked, this._likes.length);
 
     this._likeButton.addEventListener("click", () => {
-      const isLiked = this._likeButtonIcon.src.includes("heart-active.svg");
-      this._likeButtonIcon.src = isLiked
-        ? "/images/cards_images/card__icon__heart.svg"
-        : "/images/cards_images/card__icon__heart-active.svg";
+      if (!this._isLiked) {
+        api
+          .likeCard(this._cardId)
+          .then((data) => {
+            this._isLiked = true;
+            this._likes = Array.isArray(data.likes) ? data.likes : [];
+            this._updateLikeView(true, this._likes.length);
+          })
+          .catch((err) => console.log("Error al dar like:", err));
+      } else {
+        api
+          .unlikeCard(this._cardId)
+          .then((data) => {
+            this._isLiked = false;
+            this._likes = Array.isArray(data.likes) ? data.likes : [];
+            this._updateLikeView(false, this._likes.length);
+          })
+          .catch((err) => console.log("Error al quitar like:", err));
+      }
     });
   }
 
@@ -33,7 +74,16 @@ export default class Card {
     this._deleteButton = this._element.querySelector(
       ".card__btn-action-remove"
     );
-    this._deleteButton.addEventListener("click", this._handleDeleteCard);
+    // Corregir ícono de basura
+    const trashIcon = this._deleteButton.querySelector(".card__icon");
+    if (trashIcon) {
+      trashIcon.src = "./images/cards_images/card__icon__trash.svg";
+    }
+    this._deleteButton.addEventListener("click", () => {
+      if (this._handleDeleteClick) {
+        this._handleDeleteClick(this._cardId, this._element);
+      }
+    });
     this._handleLikeButton();
 
     this._element
